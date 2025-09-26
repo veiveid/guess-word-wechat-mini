@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f9fafb;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background: #ffffff;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+}
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+.app-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* Body */
+.main {
+  flex: 1;
+  padding: 20rpx;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  border-radius: 16rpx;
+  background: #ffffff;
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+.list-item:active {
+  transform: scale(0.98);
+  background: #f3f4f6;
+}
+.item-text {
+  font-size: 32rpx;
+  color: #111827;
+}
+.arrow {
+  font-size: 36rpx;
+  color: #9ca3af;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #6b7280;
+  border-top: 1rpx solid #e5e7eb;
+}

@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- Header -->
+  <view class="header">
+    <image class="logo" src="/image/logo.png" mode="aspectFit"></image>
+    <text class="app-name">应用一览</text>
+  </view>
+
+  <!-- Body List -->
+  <view class="main">
+    <block wx:for="{{menuList}}" wx:key="index">
+      <view class="list-item" bindtap="goPage" data-url="{{item.url}}">
+        <text class="item-text">{{item.title}}</text>
+        <text class="arrow">›</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- Footer -->
+  <view class="footer">
+    <text>© 2025 应用一览</text>
+  </view>
+</view>
