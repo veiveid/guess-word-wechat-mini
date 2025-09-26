@@ -1,0 +1,131 @@
+.container {
+  padding: 20rpx;
+  text-align: center;
+  background: #f4f7fb;
+  min-height: 50vh;
+}
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+  color: #333;
+}
+.word {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+  flex-wrap: wrap;
+}
+.meaningBox {
+  font-size: 36rpx;
+}
+.letter {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 5rpx;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  background: #fff;
+}
+.letter.revealed {
+  background: #eef2ff;
+  border: 1px solid #666;
+}
+.input {
+  background-color: #fff;
+  margin: 20rpx 220rpx 0rpx 20rpx;
+ 
+  border: 1px solid #ccc;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  width: 40%;
+  text-align: left;
+}
+.btn {
+  margin: 10rpx;
+  padding: 12rpx;
+  border-radius: 8rpx;
+  background: #4f46e5;
+  color: white;
+}
+.btn.hint {
+  background: #f59e0b;
+}
+.btn.next {
+  background: #6b7280;
+}
+.message {
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+.message.success {
+  color: #10b981;
+}
+.message.fail {
+  color: #df0000;
+}
+.message.error {
+  color: #ef4444;
+}
+.score {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.keyboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.key {
+  width: 70rpx;
+  height: 90rpx;
+  margin: 0 4rpx;
+  background: white;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.key:active {
+  transform: translateY(4rpx);
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  background: #f0f0f0;
+}
+
+.backspace-key {
+  width: 100rpx;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.enter {
+  width: 100rpx;
+  background-color: #10b981;
+}
+
+.backspace-icon {
+  width: 50rpx;
+  height: 50rpx;
+  filter: invert(1);
+}

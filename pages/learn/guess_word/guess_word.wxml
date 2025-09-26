@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="title">Guess the Word 🎮</view>
+
+  <view class="word">
+    <block wx:for="{{displayedWord}}" wx:key="index">
+      <text class="letter {{item.revealed ? 'revealed' : ''}}">{{item.char}}</text>
+    </block>
+  </view>
+  <view class="meaningBox">
+      <text>{{phonetic}}</text>
+      <text>{{meaning}}</text>
+  </view>
+  <view class="message {{messageType}}">{{message}}</view>
+
+  <button class="btn hint" bindtap="onHint">Hint</button>
+  
+  <view class="keyboard">
+    <view class="keyboard-row">
+      <input class="input" bindinput="onInput" value="{{guess}}" />
+    <view class="key backspace-key" bindtap="onBackspace">《-</view>
+    </view>
+    
+    <!-- 第一行: Q-P -->
+    <view class="keyboard-row">
+      <view class="key" bindtap="onKeyTap" data-key="q">Q</view>
+      <view class="key" bindtap="onKeyTap" data-key="w">W</view>
+      <view class="key" bindtap="onKeyTap" data-key="e">E</view>
+      <view class="key" bindtap="onKeyTap" data-key="r">R</view>
+      <view class="key" bindtap="onKeyTap" data-key="t">T</view>
+      <view class="key" bindtap="onKeyTap" data-key="y">Y</view>
+      <view class="key" bindtap="onKeyTap" data-key="u">U</view>
+      <view class="key" bindtap="onKeyTap" data-key="i">I</view>
+      <view class="key" bindtap="onKeyTap" data-key="o">O</view>
+      <view class="key" bindtap="onKeyTap" data-key="p">P</view>
+    </view>
+
+    <!-- 第二行: A-L -->
+    <view class="keyboard-row">
+      <view class="key" bindtap="onKeyTap" data-key="a">A</view>
+      <view class="key" bindtap="onKeyTap" data-key="s">S</view>
+      <view class="key" bindtap="onKeyTap" data-key="d">D</view>
+      <view class="key" bindtap="onKeyTap" data-key="f">F</view>
+      <view class="key" bindtap="onKeyTap" data-key="g">G</view>
+      <view class="key" bindtap="onKeyTap" data-key="h">H</view>
+      <view class="key" bindtap="onKeyTap" data-key="j">J</view>
+      <view class="key" bindtap="onKeyTap" data-key="k">K</view>
+      <view class="key" bindtap="onKeyTap" data-key="l">L</view>
+    </view>
+
+    <!-- 第三行: Z-M + 退格键 -->
+    <view class="keyboard-row">
+      <view class="key" bindtap="onKeyTap" data-key="z">Z</view>
+      <view class="key" bindtap="onKeyTap" data-key="x">X</view>
+      <view class="key" bindtap="onKeyTap" data-key="c">C</view>
+      <view class="key" bindtap="onKeyTap" data-key="v">V</view>
+      <view class="key" bindtap="onKeyTap" data-key="b">B</view>
+      <view class="key" bindtap="onKeyTap" data-key="n">N</view>
+      <view class="key" bindtap="onKeyTap" data-key="m">M</view>
+      <view class="key enter" bindtap="onGuess">Enter</view>
+    </view>
+  </view>
+  <button class="btn next" bindtap="onNext">Next Word</button>
+  <view class="score">Correct Words: {{correctCount}}</view>
+</view>
